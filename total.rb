@@ -1,8 +1,8 @@
-def total(from, to)
+def total(from, to, &block)
     result = 0
     from.upto(to) do |num|
-        if block_given?
-            result += yield(num)
+        if block
+            result += block.call(num)
         else
             result += num
         end
