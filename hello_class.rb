@@ -1,20 +1,16 @@
 class HelloWorld
+    Version = "1.0"
+    attr_accessor :name
     def initialize(myname = "Ruby")
         @name = myname
     end
 
-    #@nameを参照
-    def name
-        @name
-    end
-
-    #@nameを変更
-    def name=(value)
-        @name = value
-    end
-
     def hello
         puts "Hello, world. I am #{@name}."
+    end
+
+    def greet
+        puts "Hi, I am #{self.name}."
     end
 end
 
@@ -23,3 +19,4 @@ alice = HelloWorld.new("Alice")
 ruby = HelloWorld.new
 
 bob.hello
+ruby.greet
