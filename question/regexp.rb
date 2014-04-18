@@ -24,3 +24,9 @@ def word_capitalize(str)
 end
 
 p word_capitalize("in-reply-to")
+
+def collect_word_capitalize(str)
+    return str.split(/\-/).collect{|w| w.capitalize}.join('-')
+end
+
+p collect_word_capitalize("X-MAILER")
