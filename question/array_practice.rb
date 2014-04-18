@@ -12,14 +12,13 @@ end
 
 def sum_array(aryx, aryy)
     if aryx.size > aryy.size
-        count = aryx.size
+        cnt = aryx.size
     else
-        count = aryy.size
+        cnt = aryy.size
     end
     result = Array.new
-    for i in 1..count
-        key = i - 1
-        result[key] = aryx[key] + aryy[key]
+    cnt.times do |i|
+        result[i] = aryx[i] + aryy[i]
     end
     return result
 end
